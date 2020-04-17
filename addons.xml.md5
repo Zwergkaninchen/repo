@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon><addons id="plugin.video.joyn" name="Joyn" version="2.3.1.2" provider-name="knaerzche">
+	<requires>
+		<import addon="inputstream.adaptive" version="2.2.21" />
+		<import addon="script.module.inputstreamhelper" version="0.3.5" />
+		<import addon="script.module.pydes" version="2.0.1" />
+		<import addon="script.module.simplejson" version="3.3.0" />
+		<import addon="script.module.uepg" version="1.0.5" />
+		<import addon="xbmc.python" version="2.26.0" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="login" />
+	<extension point="xbmc.addon.metadata">
+		<reuselanguageinvoker>true</reuselanguageinvoker>
+		<summary lang="en_GB">Joyn Video On Demand  and Live TV</summary>
+		<summary lang="de_DE">Joyn Video On Demand and Live TV</summary>
+		<description lang="en_GB">Watch VOD content und Live TV provided by Joyn</description>
+		<description lang="de_DE">Video On Demand und Live TV von Joyn</description>
+		<disclaimer lang="en_GB">The use of this addon may violate the terms and conditions of Joyn GmbH - especially, but not exclusively, if it is used outside of Germany.</disclaimer>
+		<disclaimer lang="de_DE">Die Nutzung dieses Addon verstösst eventuell gegen die AGB der Joyn GmbH - insbesondere, aber nicht ausschliesslich, wenn es außerhalb von Deutschland verwendet wird</disclaimer>
+		<platform>all</platform>
+		<license>GPL-2.0-only</license>
+		<forum>https://www.kodinerds.net/index.php/Thread/66679-Pre-Release-Joyn-VOD-Live/?postID=537817</forum>
+		<website>https://www.joyn.de/</website>
+		<email>knaerzche at gmail dot com</email>
+		<source>https://github.com/knaerzche/plugin.video.joyn</source>
+		<assets>
+			<icon>resources/media/icon.png</icon>
+			<fanart>resources/media/fanart.jpg</fanart>
+			<clearlogo>resources/media/logo.gif</clearlogo>
+			<screenshot>resources/media/screenshot01.jpg</screenshot>
+			<screenshot>resources/media/screenshot02.jpg</screenshot>
+			<screenshot>resources/media/screenshot03.jpg</screenshot>
+		</assets>
+		<news>
+v2.3.1.2
+fix license based display for tvshows, season, epsiodes
+add license based display for complation/-items
+make installation of script.module.uepg optional / on demand
+minor other bugfixes
+v2.3.1.1
+Hotfix: Website changed again
+v2.3.1
+improve addon overall addon performance by reusing languageinvoker/splitting into submodules/logging on demand only
+create singleton-instances on per addon-handle basis
+cache epg/landing-page in libjoyn-instance
+fix playback on OSX
+create fake-uuid for allwinner android sdk level 24 (importing uuid module crashes kodi)
+implement own get_node() and make it more unique (espacially on android)
+fix set sort as per settings on matrix
+use window.setProperty for asset_id instead of 'hiding' in it imdb-infolabel
+make sure only playback for this addon is tracked in service.py
+fix relogin issue, when decrypting username/password fails
+fix language files
+v2.3.0
+add api-based resume postions
+partly fixed live stream audio sync issue
+add save username/password option
+add option to show categories in main menu
+add ask-for-login dialog on first addon start
+show content based on current subscription
+add option to hightlight premium content
+rework some stuff
+
+		</news>
+	</extension>
+</addon></addons>
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon><addons id="plugin.video.PsycoTV"
+       name="PsycoTV"
+       version="2.3.0"
+       provider-name="Psyco">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />	
+	<import addon="script.module.t0mm0.common" version="2.0.0" />
+    <import addon="script.module.beautifulsoup" version="3.2.1" />
+    <import addon="script.module.simple.downloader" version="0.9.4" />
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.simple.downloader" version="0.9.4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" />
+    <import addon="plugin.video.youtube" version="3.0.0" />
+    <import addon="script.module.urlresolver" />
+    <import addon="script.module.simplejson" /> 
+    <import addon="script.common.plugin.cache" version="2.5.2" />
+    <import addon="script.module.metahandler" version="2.5.1" />
+
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>PsycoTV</summary>
+		<description>PsycoTV</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+  </extension>
+<addon><addons
+
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<addon><addons id="plugin.video.rtlnow" name="TVNOW - DE" version="2.0.9" provider-name="L0RE, realvito">
+	<requires>
+	    <import addon="xbmc.python" version="2.25.0" />
+		<import addon="script.common.plugin.cache" version="2.6.0" />
+		<import addon="inputstream.adaptive" version="2.0.10" />
+		<import addon="script.module.inputstreamhelper" version="0.4.0" />
+		<import addon="service.cron.autobiblio" version="2.0.4" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="de_DE">Mediathek von TVNOW</summary>
+		<summary lang="en_GB">Mediathek of TVNOW</summary>
+		<description lang="de_DE">Bei TVNOW Serien, Shows und Filme online streamen.  Schau dir komplette Serien an, fiebere bei deinen liebsten Daily-Soaps mit oder staune bei spannenden Dokumentationen – alles wann und wo du willst auf Abruf.[CR]Viele Inhalte aus dem TV Programm siehst du bei TVNOW sogar schon vor TV-Aussstrahlung !</description>
+		<description lang="en_GB">Stream TVNOW series, shows and movies online. Watch complete series, enjoy your favorite daily soap operas or marvel at exciting documentaries - all when and where you want on demand.[CR]Many content from the TV program you see on TVNOW even before TV broadcast !</description>
+		<disclaimer lang="de_DE">Die von diesem Addon dargestellten Inhalte werden von den Erstellern des Addons weder gehostet oder verbreitet, noch stehen die Ersteller in irgendeiner Beziehung zu den Anbietern des Inhalts.</disclaimer>
+		<disclaimer lang="en_GB">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content providers.</disclaimer>
+		<language></language>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+		<forum>https://www.kodinerds.net/index.php/Thread/57646-Release-TVNow-RTL-Watchbox-Vox-NTV-NOWUS-RTL2-Nitro/</forum>
+		<website>https://www.tvnow.de/</website>
+		<email></email>
+		<source>https://github.com/kodinerds/repo/tree/master/plugin.video.rtlnow</source>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<news>[B][COLOR orangered]Version 2.0.9  (20.03.2020)[/COLOR][/B] by realvito[CR]
+- fixed: Wenn in einer Episode einer Jahresrubrik kein Plot enthalten ist wird die Übersicht nicht geöffnet und ein Fehler wird angezeigt
+---------------------------------------------------------------------------------------------------------------------------------
+[B][COLOR orangered]Version 2.0.8  (02.03.2020)[/COLOR][/B] by realvito[CR]
+- fixed: Rubrik = Neue Sendungen werden nicht angezeigt
+- fixed: Letzter Ordner unter Rubrik = Themen wird nicht geöffnet
+---------------------------------------------------------------------------------------------------------------------------------
+[B][COLOR orangered]Version 2.0.7  (29.02.2020)[/COLOR][/B] by realvito[CR]
+- fixed: Vereinzelt können Episoden z.B. "Das perfekte Dinner" oder "GZSZ" nicht abgespielt werden
+---------------------------------------------------------------------------------------------------------------------------------
+[B][COLOR orangered]Version 2.0.6  (25.02.2020)[/COLOR][/B] by realvito[CR]
+- added: Es können jetzt auch einzelne Jahrgänge einer Serie zur KODI-Bibliothek hinzugefügt werden
+- fixed: Teilweise können Free-Videos aus der KODI-Bibliothek nicht abgespielt werden
+- optimized: Updatezyklus für Bibliothek jetzt unabhängig von Addonnutzung, da separater Hintergrund-Prozess
+---------------------------------------------------------------------------------------------------------------------------------
+[B][COLOR orangered]Version 2.0.5  (03.02.2020)[/COLOR][/B] by realvito[CR]
+- changed: Addon-Abhängigkeit für zugehörigen Service (old=service.L0RE.cron -> new=service.cron.autobiblio)
+* Comment: Zuvor mit diesem Addon erstellte Einträge in der KODI-Bibliothek funktionieren NICHT mehr und müssen über die KODI-Sytemeinstellungen gelöscht werden !!! *
+		</news>
+	</extension>
+<addon><addons
+
+<?xml version='1.0' encoding='UTF-8'?>
+<addon><addons id="plugin.video.tvnow.de" name="TvNow" provider-name="Pati" version="0.5.9">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.requests" version="2.9.1" />
+    <import addon="inputstream.adaptive" version="1.0.8" />
+    <import addon="script.module.routing" version="0.2.0" />
+    <import addon="script.module.pycryptodome" version="3.4.3" />
+    <import addon="script.module.inputstreamhelper" version="0.4.2" />
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource">
+    <provides>video</provides>
+  </extension>
+  <extension library="service.py" point="xbmc.service" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="de">Plugin für TvNow Deutschland</summary>
+    <summary lang="en_gb">Plugin for TvNow Germany</summary>
+    <description lang="de" />
+    <description lang="en_gb" />
+    <disclaimer lang="en_gb" />
+    <language />
+    <platform>all</platform>
+    <license />
+    <forum />
+    <website />
+    <email />
+    <source />
+  </extension>
+<addon><addons
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon><addons id="script.module.urlresolver" name="URLResolver" version="4.0.58" provider-name="Resolver Team">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="plugin.video.youtube" />
+		<import addon="script.module.python.twitch" />
+		<import addon="script.module.cryptopy" version="1.2.6" />
+		<import addon="script.module.pydevd-pycharm" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.python.pluginsource" library="lib/default.py" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="de">URLResolver wird für die Stream Wiedergabe benötigt</summary>
+		<description lang="de">Empfängt viele Video URL's, die in XBMC/Kodi abspielbar sind</description>
+	</extension>
+<addon><addons
