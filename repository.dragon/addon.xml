@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="repository.dragon" name="dragon Add-ons" version="6.0.1" provider-name="Dragon">
 	<extension point="xbmc.addon.repository" name="Dragon">
-		<info compressed="true">https://raw.githubusercontent.com/Zwergkaninchen/dragon-repo/master/addons.xml</info>
-		<checksum>https://raw.githubusercontent.com/Zwergkaninchen/dragon-repo/master/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.githubusercontent.com/Zwergkaninchen/dragon-repo/master/</datadir>
+		<info compressed="true">https://raw.githubusercontent.com/Zwergkaninchen/repo/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/Zwergkaninchen/repo/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/Zwergkaninchen/repo/master/</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Official Repository of Dragon</summary>
