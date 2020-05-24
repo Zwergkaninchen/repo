@@ -1,5 +1,5 @@
-<addons>
-<addon id="plugin.video.joyn" name="Joyn" version="2.3.1.1" provider-name="knaerzche">
+<?xml version='1.0' encoding='UTF-8'?>
+<addons><addon id="plugin.video.joyn" name="Joyn" version="2.3.1.1" provider-name="knaerzche">
 	<requires>
 		<import addon="xbmc.python" version="2.26.0"/>
 		<import addon="inputstream.adaptive" version="2.2.21"/>
@@ -62,9 +62,10 @@ rework some stuff
 
 		</news>
 	</extension>
-</addon>
+</addon></addons>
 
-<addon id="plugin.video.rtlnow" name="TVNOW - DE" version="2.0.9" provider-name="L0RE, realvito">
+<?xml version='1.0' encoding='UTF-8'?>
+<addons><addon id="plugin.video.rtlnow" name="TVNOW - DE" version="2.0.9" provider-name="L0RE, realvito">
 	<requires>
 		<import addon="xbmc.python" version="2.25.0"/>
 		<import addon="script.common.plugin.cache" version="2.6.0" optional="true"/>
@@ -113,5 +114,4 @@ rework some stuff
 * Comment: Zuvor mit diesem Addon erstellte Einträge in der KODI-Bibliothek funktionieren NICHT mehr und müssen über die KODI-Sytemeinstellungen gelöscht werden !!! *
 		</news>
 	</extension>
-</addon>
-</addon>
+</addon></addons>
