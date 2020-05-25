@@ -2,10 +2,10 @@
 
 [logo]: repository.zwergkaninchen/icon.png
 
-### The repository has a new address 
+### The Zwergkaninchen repository 
 
-### No Support or merge here!
+### Happy Fun!
 
-Support: 
+ 
 .
 .
